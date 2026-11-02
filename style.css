@@ -1,0 +1,890 @@
+/* =========================
+RESET & DASAR
+========================= */
+
+    {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    min-height: 75px;
+    margin: auto;
+    padding: 10px 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand h2 {
+    color: #08783e;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.brand span {
+    color: #f0a500;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-menu {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+}
+
+.nav-menu li a {
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #08783e;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(rgba(0, 105, 55, 0.88),
+            rgba(0, 128, 67, 0.88)),
+        url("images/sekolah.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #fff;
+
+}
+
+.hero-content {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    padding: 80px 25px;
+}
+
+.hero-label {
+    color: #ffd65a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 72px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero h2 {
+    max-width: 700px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #e8ffef;
+}
+
+.hero-description {
+    max-width: 800px;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* =========================
+BUTTON
+========================= */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+    border: none;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.btn-primary {
+    background: #f5b700;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #d99f00;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #08783e;
+}
+
+.btn-secondary:hover {
+    background: #e8f8ee;
+    transform: translateY(-3px);
+}
+
+/* =========================
+SECTION
+========================= */
+
+.section {
+    padding: 80px 25px;
+    background: #fff;
+}
+
+.section-gray {
+    background: #f1f9f4;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #f0a500;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.section-title h2 {
+    color: #08783e;
+    font-size: 36px;
+    margin: 8px 0;
+}
+
+.section-title span {
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: 15px auto 0;
+
+    background: #f0a500;
+    border-radius: 5px;
+
+}
+
+/* =========================
+PROFIL - FLEXBOX
+========================= */
+
+.profil-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.profil-image,
+.profil-content {
+    flex: 1;
+}
+
+.profil-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 100, 50, 0.15);
+
+}
+
+.profil-content h3 {
+    color: #08783e;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.profil-content p {
+    margin-bottom: 18px;
+    color: #555;
+}
+
+/* =========================
+INFORMASI
+========================= */
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #dceee2;
+
+}
+
+.info-item strong {
+    color: #08783e;
+    flex-shrink: 0;
+}
+
+.info-item span {
+    text-align: right;
+    max-width: 65%;
+}
+
+/* =========================
+VISI MISI - FLEXBOX
+========================= */
+
+.visi-misi {
+    max-width: 1100px;
+    margin: 70px auto 0;
+
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+
+}
+
+.visi-misi-card {
+    flex: 1;
+
+    background: #f1f9f4;
+
+    border-left: 5px solid #08783e;
+    border-radius: 10px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 100, 50, 0.08);
+
+}
+
+.icon-box {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.visi-misi-card h3 {
+    color: #08783e;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.visi-misi-card p {
+    color: #555;
+    text-align: justify;
+}
+
+/* =========================
+PROGRAM - FLEXBOX
+========================= */
+
+.program-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+
+}
+
+.program-card {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+    padding: 35px;
+
+    border-radius: 15px;
+    border: 1px solid #d9eee1;
+
+    box-shadow:
+        0 8px 25px rgba(0, 100, 50, 0.08);
+
+    transition: 0.3s;
+
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    border-color: #08783e;
+
+    box-shadow:
+        0 15px 35px rgba(0, 100, 50, 0.15);
+
+}
+
+.program-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.program-card h3 {
+    color: #08783e;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.program-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.program-card a {
+    margin-top: auto;
+
+    color: #08783e;
+    font-weight: bold;
+
+}
+
+.program-card a:hover {
+    color: #f0a500;
+}
+
+/* =========================
+GURU - FLEXBOX
+========================= */
+
+.guru-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.guru-card {
+    flex: 1 1 240px;
+    max-width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.guru-image {
+    width: 100%;
+}
+
+.guru-image img {
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+    border: 5px solid #e2f3e8;
+
+    box-shadow:
+        0 10px 25px rgba(0, 100, 50, 0.15);
+
+}
+
+.guru-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.guru-content h3 {
+    color: #08783e;
+    font-size: 20px;
+}
+
+.guru-content p {
+    color: #777;
+}
+
+/* =========================
+GALERI - FLEXBOX
+========================= */
+
+.galeri-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.galeri-item {
+    flex: 1 1 calc(33.333% - 20px);
+
+    min-width: 250px;
+    height: 230px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+    background: #ddd;
+
+}
+
+.galeri-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+
+}
+
+.galeri-item:hover img {
+    transform: scale(1.08);
+}
+
+/* =========================
+KONTAK - FLEXBOX
+========================= */
+
+.kontak-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+
+}
+
+.kontak-info,
+.kontak-form {
+    flex: 1;
+
+    background: #f1f9f4;
+    padding: 35px;
+
+    border-radius: 15px;
+
+}
+
+.kontak-info h3,
+.kontak-form h3 {
+    color: #08783e;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.kontak-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+
+}
+
+.kontak-icon {
+    flex-shrink: 0;
+    font-size: 25px;
+}
+
+.kontak-item h4 {
+    color: #08783e;
+    margin-bottom: 5px;
+}
+
+.kontak-item p {
+    color: #555;
+}
+
+/* =========================
+FORM
+========================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #08783e;
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cce5d5;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+    background: #fff;
+
+    transition: 0.3s;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #08783e;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 120, 62, 0.1);
+
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.kontak-form .btn {
+    background: #08783e;
+    color: #fff;
+}
+
+.kontak-form .btn:hover {
+    background: #065f31;
+    transform: translateY(-2px);
+}
+
+/* =========================
+FOOTER - FLEXBOX
+========================= */
+
+footer {
+    background: #075c30;
+    color: #fff;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 25px;
+
+    display: flex;
+    gap: 40px;
+
+}
+
+.footer-about {
+    flex: 1.5;
+}
+
+.footer-links,
+.footer-contact {
+    flex: 1;
+}
+
+.footer-about h2 {
+    color: #ffd34f;
+    margin-bottom: 15px;
+}
+
+.footer-about p {
+    color: #d8eee0;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 15px;
+    color: #ffd34f;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    color: #d8eee0;
+    margin-bottom: 8px;
+
+    transition: 0.3s;
+
+}
+
+.footer-links a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    color: #d8eee0;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+    padding: 20px;
+
+    color: #c9e5d3;
+    font-size: 14px;
+
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        gap: 18px;
+    }
+
+    .profil-container {
+        flex-direction: column;
+    }
+
+    .profil-image,
+    .profil-content {
+        width: 100%;
+    }
+
+    .visi-misi {
+        flex-direction: column;
+    }
+
+    .program-container {
+        flex-direction: column;
+    }
+
+    .kontak-container {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        flex: 1 1 45%;
+    }
+
+    .galeri-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+}
+
+/* =========================
+HP
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .brand h2 {
+        font-size: 16px;
+    }
+
+    .brand span {
+        display: none;
+    }
+
+    .nav-menu {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .nav-menu li a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 80vh;
+        background-attachment: scroll;
+    }
+
+    .hero-content {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 60px 18px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .profil-image img {
+        height: 280px;
+    }
+
+    .info-item {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .info-item span {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .visi-misi-card {
+        padding: 25px;
+    }
+
+    .galeri-container {
+        flex-direction: column;
+    }
+
+    .galeri-item {
+        width: 100%;
+        height: 250px;
+    }
+
+    .kontak-item {
+        flex-direction: row;
+    }
+
+    .kontak-info,
+    .kontak-form {
+        padding: 25px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 45px 20px;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        flex: 1;
+    }
+
+}
